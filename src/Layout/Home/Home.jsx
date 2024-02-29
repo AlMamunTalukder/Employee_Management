@@ -1,9 +1,11 @@
+import Dashboard from "../Dashboard";
+
 
 
 const Home = () => {
     return (
         <div>
-            <h1>THis is a home</h1>
+            <Dashboard/>
         </div>
     );
 };
