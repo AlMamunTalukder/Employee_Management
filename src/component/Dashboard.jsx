@@ -1,165 +1,86 @@
-import {
-    FaAd,
-    FaBook,
-    FaCalendar,
-    FaCommentDots,
-    FaEnvelope,
-    FaHome,
-    FaList,
-    FaSearch,
-    FaShoppingCart,
-    FaUserFriends,
-    FaUsers,
-    FaUtensils,
-  } from "react-icons/fa";
+import {FaCommentDots, FaHome, FaUserFriends, FaUsers} from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { IoHome } from "react-icons/io5";
+import { IoLogoWechat } from "react-icons/io5";
+import { IoSettingsSharp } from "react-icons/io5";
+import { FaDoorOpen } from "react-icons/fa";
+import { IoPersonAdd } from "react-icons/io5";
+
 const Dashboard = () => {
     return (
-        <div>
-        {" "}
         <div className="flex">
-          {/* dashboard side bar */}
-          <div className="w-64 min-h-screen bg-white text-black">
-            <ul className="menu p-4">
-              <>
+          <div className="w-64 min-h-screen bg-white text-black  ">
+            <ul className="menu p-4 mt-10 mb-32"> 
                 <li>
                   <a href="#">
                     <FaHome></FaHome>
-                    Admin Home
+                    Employee Management
                   </a>
                 </li>
-                <li>
-                  <FaUtensils></FaUtensils>
-                  Add Items
-                </li>
-                <li>
-                  <FaList></FaList>
-                  Manage Items
-                </li>
-                <li>
-                  <FaBook></FaBook>
-                  Manage Bookings
-                </li>
-                <li>
-                  <FaUsers></FaUsers>
-                  All Users
-                </li>
-  
-                <li>
-                  <FaHome></FaHome>
-                  User Home
-                </li>
-                <li>
-                  <FaCalendar></FaCalendar>
-                  Not History
-                </li>
-                <li>
-                  <FaShoppingCart></FaShoppingCart>
-                </li>
-                <li>
-                  <FaAd></FaAd>
-                  Add a Review
-                </li>
-                <li>
-                  <FaList></FaList>
-                  Real Payment History
-                </li>
-              </>
-              <>
-                {/* <li>
-            <Link href = "/dashboard/adminProfile" >
-              <span span className = {
-                nav-link ${pathname === '/dashboard/adminProfile' ? 'active' : ' rounded-lg hover:underline hover:scale-110 hover:shadow-lg transition delay-150 duration-300 ease-in-out flex items-center gap-1'}
-              } >
-                <CgProfile></CgProfile>
-            Admin Profile</span>
-            </Link>
-          </li> */}
-                {/* 
-          <li>
-            <Link href="/dashboard/addPost">
-              <span className={nav-link ${pathname === '/dashboard/addPost' ? 'active' : ' rounded-lg hover:underline hover:scale-110 hover:shadow-lg transition delay-150 duration-300 ease-in-out flex items-center gap-1'}}><FaSignsPost></FaSignsPost>
-            Blog Add</span>
-            </Link>
-          </li> */}
-  
-                {/* <li>
-            <Link Link href = "/dashboard/parcelManage" >
-              <span className={nav-link ${pathname === '/dashboard/parcelManage' ? 'active' : ' rounded-lg hover:underline hover:scale-110 hover:shadow-lg transition delay-150 duration-300 ease-in-out flex items-center gap-1'}}><FaBoxOpen></FaBoxOpen>
-            Parcels Manage</span>
-            </Link>
-          </li> */}
-  
-                {/* <li>
-                  <Link href="/dashboard/usersManage">
-                    <span
-                      className={`nav-link ${
-                        pathname === "/dashboard/usersManage"
-                          ? "active"
-                          : " rounded-lg hover:underline hover:scale-110 hover:shadow-lg transition delay-150 duration-300 ease-in-out flex items-center gap-1"
-                      }`}
-                    >
+                <li className="ml-4">
+                  <Link href="/dashboard/usersManage">                    
                       <FaUsers></FaUsers>
-                      Users Manage
-                    </span>
+                      All Employees                    
                   </Link>
-                </li> */}
-  
-                {/* <li href="#">
-                  <span>
-                    <FaUser></FaUser>
-                    Delivery Boy
-                  </span>
-                </li> */}
-  
-                {/* <li>
-            <Link href="/dashboard/application">
-              <span className={nav-link ${pathname === '/dashboard/application' ? 'active' : ' rounded-lg hover:underline hover:scale-110 hover:shadow-lg transition delay-150 duration-300 ease-in-out flex items-center gap-1'}}> <FaBriefcase></FaBriefcase>
-            Application</span>
-            </Link>
-          </li>
-  
-          <li>
-            <Link href="/dashboard/returnOrder">
-              <span className={nav-link ${pathname === '/dashboard/returnOrder' ? 'active' : ' rounded-lg hover:underline hover:scale-110 hover:shadow-lg transition delay-150 duration-300 ease-in-out flex items-center gap-1'}}><GiReturnArrow />
-            Return Order</span>
-            </Link>
-          </li> */}
-              </>
-  
-              <div className="divider"></div>
-  
-              {/* shared nav link */}
-              <li>
-                <FaHome></FaHome>
-                Home
-              </li>
-              <li>
-                <FaSearch></FaSearch>
-                Menu
-              </li>
-              <li>
-                <FaEnvelope></FaEnvelope>
-                Contact
-              </li>
+                </li>
+                <li className="ml-4">
+                  <Link href="/dashboard/usersManage">                    
+                  <IoPersonAdd />
+                      Add New Employees                    
+                  </Link>
+                </li>       
+               
             </ul>
+            <div className="divider"></div> 
+            <div className="flex-1 items-center px-4 ml-10">
+			<ul className="pt-2 pb-4 space-y-1 text-sm">
+				<li className="rounded-sm">
+					<a rel="noopener noreferrer" href="#" className="flex items-center p-2 space-x-3 rounded-md">
+          <IoHome />
+						<span>Home</span>
+					</a>
+				</li>
+			
+				<li className="rounded-sm">
+					<a rel="noopener noreferrer" href="#" className="flex items-center p-2 space-x-3 rounded-md">
+          <IoLogoWechat />
+						<span>Chat</span>
+					</a>
+				</li>
+				
+				<li className="rounded-sm">
+					<a rel="noopener noreferrer" href="#" className="flex items-center p-2 space-x-3 rounded-md">
+          <IoSettingsSharp />
+						<span>Settings</span>
+					</a>
+				</li>
+				<li className="rounded-sm">
+					<a rel="noopener noreferrer" href="#" className="flex items-center p-2 space-x-3 rounded-md">
+          <FaDoorOpen />
+						<span>Logout</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+            
           </div>
-          {/* dashboard content */}
-          {/* <div className="flex-1 p-8">
-      <Outlet></Outlet>
-    </div> */}
+        
+<div className="flex-1 p-8">
+    
+    </div> 
           <div>
             <div className="px-4 py-8 h-screen bg-[#010313] text-white space-y-8">
               <h2 className="text-2xl font-bold">
-                Hi, <span className="text-orange-700">Ayrin Rahat Promi</span>{" "}
-                Welcome Back!
+              Welcome to <span className="text-orange-700">Employee Management </span>{" "}
+                 Page
               </h2>
   
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 <div className="flex justify-center items-center space-x-5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-8 py-8 rounded-lg">
                   <span className="text-5xl">{/* <SiTask></SiTask> */}</span>
                   <div>
-                    <h2 className="text-2xl font-bold">5</h2>
-                    <p className="text-lg font-bold">Orders</p>
+                    <h2 className="text-2xl font-bold">16</h2>
+                    <p className="text-lg font-bold">Employee</p>
                   </div>
                 </div>
   
@@ -169,7 +90,7 @@ const Dashboard = () => {
                   </span>
                   <div>
                     <h2 className="text-2xl font-bold">06</h2>
-                    <p className="text-lg font-bold">Users</p>
+                    <p className="text-lg font-bold">Old Employees</p>
                   </div>
                 </div>
   
@@ -179,7 +100,7 @@ const Dashboard = () => {
                   </span>
                   <div>
                     <h2 className="text-2xl font-bold">10</h2>
-                    <p className="text-lg font-bold">Reviews</p>
+                    <p className="text-lg font-bold">New Employees</p>
                   </div>
                 </div>
               </div>
@@ -227,8 +148,8 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-      </div>
     );
+    
   };
     
 
