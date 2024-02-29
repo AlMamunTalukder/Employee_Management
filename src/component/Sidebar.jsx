@@ -11,7 +11,7 @@ const Sidebar = () => {
     return (
         <div>
             
-            <div className="w-64 min-h-screen bg-white text-black pt-10 -ml-24 -mt-10">
+            <div className="w-64 min-h-screen bg-gray-900 text-white pt-10 -ml-24 -mt-10">
             <ul className="menu p-4  mb-32"> 
                 <li>
                   <a href="/dashboard">
@@ -26,10 +26,10 @@ const Sidebar = () => {
                   </a>
                 </li>
                 <li className="ml-4">
-                  <Link href="/dashboard/usersManage">                    
+                  <a href="/newEmployee">                    
                   <IoPersonAdd />
                       Add New Employees                    
-                  </Link>
+                  </a>
                 </li>       
                
             </ul>

@@ -7,6 +7,7 @@ import Home from './Layout/Home/Home.jsx';
 import Main from './Main/Main.jsx';
 import AllEmployees from './component/AllEmployees/AllEmployees.jsx';
 import Dashboard from './Layout/Dashboard.jsx';
+import NewEmployee from './component/NewEmployee/NewEmployee.jsx';
 
 
 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/allemployees",
         element: <AllEmployees/>,
+      },
+      {
+        path: "/newEmployee",
+        element: <NewEmployee/>,
       },
     ],
   },
